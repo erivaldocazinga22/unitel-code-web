@@ -12,11 +12,13 @@ body {
 }
 
 .container {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 24px;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
 }
 
 .logo {
@@ -31,17 +33,19 @@ body {
     width: 50px;
 }
 
-.logo span {
-    font-size: 24px;
-    font-weight: 400;
-    color: #252525;
-}
-
 h2.title {
     text-align: center;
     margin-bottom: 24px;
+    font-size: 24px;
 }
 
+.form_container {
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 20rem;
+}
 .form {
     min-width: 350px;
     width: 100%;
@@ -49,22 +53,28 @@ h2.title {
 }
 
 .form label  {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #111827;
 }
 
 .form input[type="email"],
 .form input[type="password"] {
     width: 100%;
+    display: block;
     outline: none;
     padding: 6px 16px;
-    border-radius: 5px;
     border: 1px solid black;
-    margin-top: 4px;
-    margin-bottom: 16px;
+    border-radius: 0.375rem; 
+    color: #111827; 
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
+
+
 
 .form input[type="email"]:focus,
 .form input[type="password"]:focus {
@@ -72,20 +82,28 @@ h2.title {
     border-color: #2137f8;
 }
 
-.form .password_fogot {
+.form .container_input {
+    margin-top: 8px;
+}
+
+.form .password_forgot {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
-.form .password_fogot a {
-    font-size: smaller;
-    color: #2137f8;
-    text-decoration: none;
+.form .password_forgot a {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #111827;
 }
 
-.form .password_fogot a:hover {
+.form .password_forgot a:hover {
     text-decoration: underline;
+    color: #2137f8;
 }
 
 .form button {
@@ -98,5 +116,6 @@ h2.title {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
 }
